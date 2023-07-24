@@ -1,0 +1,61 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4942e4; /* Deep Indigo */
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #C4B0FF; /* Lavender Mist */
+  font-weight: bold;
+}
+
+.content {
+  margin-top: 50px; /* Adjust the margin value to your preference */
+}
+
+/* Offcanvas styles */
+.offcanvas-header {
+  padding: 1rem;
+  background-color: #563d7c; /* Indigo */
+  color: #fff;
+}
+
+.offcanvas-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.offcanvas-body {
+  padding: 1rem;
+}
+
+.offcanvas-body ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.offcanvas-body li {
+  margin-bottom: 10px;
+}
+
+.offcanvas-body a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}

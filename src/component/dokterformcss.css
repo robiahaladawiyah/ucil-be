@@ -1,0 +1,24 @@
+.custom-button {
+    background-color: #4942E4; /* Royal Blue */
+    color: #C4B0FF; /* Lavender Mist */
+    margin-right: 10px;
+  }
+  
+  .custom-button:hover {
+    background-color: #11009E; /* Deep Indigo */
+  }
+  
+  .form-control {
+    width: 25%;
+  }
+  
+  /* Style form labels */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  /* Add margin between form groups */
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
