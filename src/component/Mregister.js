@@ -14,7 +14,7 @@ const RegisterUser = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/api/register', {
+      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

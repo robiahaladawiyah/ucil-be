@@ -29,7 +29,7 @@ const MyComponent = () => {
   const fetchData = async () => {
     
     try {
-      const response = await axios.get('https://easy-tan-betta-garb.cyclic.app/api/dokters', {
+      const response = await axios.get('https://easy-tan-betta-garb.cyclic.app/dokters', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -69,7 +69,7 @@ const MyComponent = () => {
 
   const handleDelete = async (item) => {
     try {
-      await axios.delete(`https://easy-tan-betta-garb.cyclic.app/api/dokters/${item._id}`, {
+      await axios.delete(`https://easy-tan-betta-garb.cyclic.app/dokters/${item._id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -93,12 +93,12 @@ const MyComponent = () => {
 
       if (editMode) {
         await axios.put(
-          `https://easy-tan-betta-garb.cyclic.app/api/dokters/${editData.id}`,
+          `https://easy-tan-betta-garb.cyclic.app/dokters/${editData.id}`,
           editData,
           config
         );
       } else {
-        await axios.post('https://easy-tan-betta-garb.cyclic.app/api/dokters', newData, config);
+        await axios.post('https://easy-tan-betta-garb.cyclic.app/dokters', newData, config);
       }
 
       setShowModal(false);

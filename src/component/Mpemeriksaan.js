@@ -17,7 +17,7 @@ export function DemoApp() {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/ucil/events');
+      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/events');
       const data = await response.json();
       setEvents(data);
     } catch (error) {
@@ -27,7 +27,7 @@ export function DemoApp() {
 
   const handleEventCreate = async (event) => {
     try {
-      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/ucil/events', {
+      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/events', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export function DemoApp() {
 
   const handleEventUpdate = async (event) => {
     try {
-      await fetch(`https://easy-tan-betta-garb.cyclic.app/ucil/events/${event.id}`, {
+      await fetch(`https://easy-tan-betta-garb.cyclic.app/events/${event.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ export function DemoApp() {
 
   const handleEventDelete = async (event) => {
     try {
-      await fetch(`https://easy-tan-betta-garb.cyclic.app/ucil/events/${event.id}`, {
+      await fetch(`https://easy-tan-betta-garb.cyclic.app/events/${event.id}`, {
         method: 'DELETE',
       });
       setEvents((prevEvents) =>

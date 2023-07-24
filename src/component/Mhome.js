@@ -22,7 +22,7 @@ const LoginForm = ({ onColorChange }) => {
 
   const fetchLoggedInUsers = async () => {
     try {
-      const response = await axios.get('https://easy-tan-betta-garb.cyclic.app/api/loggedinusers');
+      const response = await axios.get('https://easy-tan-betta-garb.cyclic.app/loggedinusers');
       setLoggedInUsers(response.data);
     } catch (error) {
       console.error(error);
@@ -33,7 +33,7 @@ const LoginForm = ({ onColorChange }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://easy-tan-betta-garb.cyclic.app/api/login', { username, password });
+      const response = await axios.post('https://easy-tan-betta-garb.cyclic.app/login', { username, password });
       const { token } = response.data;
 
       // Store the token in localStorage or session storage

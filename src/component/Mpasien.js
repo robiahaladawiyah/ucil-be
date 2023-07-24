@@ -27,7 +27,7 @@ const PasienTable = () => {
 
   const fetchPasiens = async () => {
     try {
-      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/api/pasiens', {
+      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/pasiens', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -69,7 +69,7 @@ const PasienTable = () => {
 
   const handleDelete = async (pasien) => {
     try {
-      const response = await fetch(`https://easy-tan-betta-garb.cyclic.app/api/pasiens/${pasien._id}`, {
+      const response = await fetch(`https://easy-tan-betta-garb.cyclic.app/pasiens/${pasien._id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -90,7 +90,7 @@ const PasienTable = () => {
     e.preventDefault();
     try {
       if (editMode) {
-        const response = await fetch(`https://easy-tan-betta-garb.cyclic.app/api/pasiens/${editData.id}`, {
+        const response = await fetch(`https://easy-tan-betta-garb.cyclic.app/pasiens/${editData.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ const PasienTable = () => {
           throw new Error('Error updating data: ' + response.statusText);
         }
       } else {
-        const response = await fetch('https://easy-tan-betta-garb.cyclic.app/api/pasiens', {
+        const response = await fetch('https://easy-tan-betta-garb.cyclic.app/pasiens', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

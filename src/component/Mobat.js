@@ -19,7 +19,7 @@ const MyComponent = () => {
   // Fetch obats from API
   const fetchObats = async () => {
     try {
-      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/api/obats');
+      const response = await fetch('https://easy-tan-betta-garb.cyclic.app/obats');
       const jsonData = await response.json();
       setObats(jsonData);
     } catch (error) {
@@ -51,7 +51,7 @@ const MyComponent = () => {
   // Handle delete button click
   const handleDelete = async (obat) => {
     try {
-      const response = await fetch(`https://easy-tan-betta-garb.cyclic.app/api/obats/${obat._id}`, {
+      const response = await fetch(`https://easy-tan-betta-garb.cyclic.app/obats/${obat._id}`, {
         method: 'DELETE',
       });
 
@@ -71,7 +71,7 @@ const MyComponent = () => {
 
     try {
       if (editMode) {
-        const response = await fetch(`https://easy-tan-betta-garb.cyclic.app/api/obats/${editData.id}`, {
+        const response = await fetch(`https://easy-tan-betta-garb.cyclic.app/obats/${editData.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const MyComponent = () => {
           throw new Error('Error updating obat: ' + response.statusText);
         }
       } else {
-        const response = await fetch('https://easy-tan-betta-garb.cyclic.app/api/obats', {
+        const response = await fetch('https://easy-tan-betta-garb.cyclic.app/obats', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
